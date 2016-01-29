@@ -1,0 +1,34 @@
+{
+    "name": "vinaykevadia/moz",
+    "type": "library",
+    "description": "SEO metrics at hand",
+    "keywords": ["seomoz","seo", "moz"],
+    "homepage": "https://github.com/vinaykevadia/moz",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon Gotlin",
+            "role": "Developer"
+        },
+        {
+            "name": "David Wickström",
+            "email": "davidwickstrom@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Vinay kevadiya ",
+            "email": "vinay.kevadia@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~6.0|~5.0|~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SeoMoz\\": "src/SeoMoz"
+        }
+    },
+    "minimum-stability": "stable"
+}
