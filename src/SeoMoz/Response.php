@@ -25,6 +25,15 @@ final class Response
      * @var
      */
     private $externalLinks;
+    /**
+     * @var
+     */
+    private $mozRank;
+
+    /**
+     * @var
+     */
+    private $timeLastCrawled;
 
     public function __construct(\stdClass $result)
     {
@@ -41,8 +50,14 @@ final class Response
         if (isset($result->ueid)) {
             $this->setExternalLinks($result->ueid);
         }
-
+        if (isset($result->umrp)) {
+            $this->setMozRank($result->umrp);
+        }
+        if (isset($result->ulc)) {
+            $this->setTimeLastCrawled($result->ulc);
+        }
     }
+
 
     /**
      * @return mixed
@@ -74,6 +89,36 @@ final class Response
     public function getPageAuthority()
     {
         return $this->pageAuthority;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMozRank(){
+        return $this->mozRank;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getTimeLastCrawled(){
+        return $this->timeLastCrawled;
+    }
+
+    /**
+     * Set time last crawled
+     * @param $timeLastCrawled
+     */
+    private function setTimeLastCrawled($timeLastCrawled){
+        $this->timeLastCrawled =  $timeLastCrawled;
+    }
+
+    /**
+     * @param mixed $mozRank
+     */
+    private function setMozRank($mozRank){
+        $this->mozRank =  $mozRank;
     }
 
     /**
