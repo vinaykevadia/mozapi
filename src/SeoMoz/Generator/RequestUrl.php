@@ -37,9 +37,8 @@ class RequestUrl
     {
         $expires = time() + 300;
         $urlSafeSignature = $this->buildSafeSignatureUrl($expires);
-        $cols = 34359738368 + 68719476736 + 536870912 + 32;
-
-        return $this->buildUrl($domainName, $cols, $expires, $urlSafeSignature);
+        //$cols = 34359738368 + 68719476736 + 536870912 + 32 + 16384 + 32768 + 1 + 4 ;
+        return $this->buildUrl($domainName, "144115291691991077", $expires, $urlSafeSignature);
     }
 
     /**
