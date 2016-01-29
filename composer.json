@@ -1,9 +1,9 @@
 {
-    "name": "vinaykevadia/moz",
+    "name": "vinaykevadia/mozapi",
     "type": "library",
     "description": "SEO metrics at hand",
     "keywords": ["seomoz","seo", "moz"],
-    "homepage": "https://github.com/vinaykevadia/moz",
+    "homepage": "https://github.com/vinaykevadia/mozapi",
     "license": "MIT",
     "authors": [
         {
